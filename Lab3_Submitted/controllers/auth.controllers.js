@@ -26,8 +26,8 @@ const postLogin = (req, res, next) => {
 
   passport.authenticate("local", {
     successRedirect: "/welcome",
-    failureRedirect: "/failure-login",
-    failureFlash: true
+    failureRedirect: "/login",
+    failureFlash: true,
   })(req, res, next);
 };
 
@@ -60,19 +60,9 @@ const postRegister = async (req, res, next) => {
     res.status(500).redirect("/register");
   }
 };
-
-
-const failure=(req,res)=>{
-  console.log('login failed');
-  res.status(500).redirect("/login");
-}
-
-
-
 module.exports = {
   getLogin,
   getRegister,
   postLogin,
   postRegister,
-  failure
 };

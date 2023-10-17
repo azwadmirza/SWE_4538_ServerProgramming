@@ -5,14 +5,13 @@ const {
     getRegister,
     postLogin,
     postRegister, 
-    failure
+    test_id_find
   } = require("../controllers/auth.controllers");
 
 router.get("/login", getLogin);
 router.post("/login", postLogin);
 router.get("/register", getRegister);
 router.post("/register", postRegister);
-router.get("/failure-login",failure);
 
 
 module.exports = router;
