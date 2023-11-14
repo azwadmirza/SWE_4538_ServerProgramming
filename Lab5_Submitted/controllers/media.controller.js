@@ -1,6 +1,6 @@
 const path = require('path');
-const User = require("../dataModels/User.model");
-const Project = require("../dataModels/Project.model");
+const User = require("../models/User.model");
+const Project = require("../models/Project.model");
 const getMultipleImages = async (req, res) => {
   try {
     const userId = req.user.id
